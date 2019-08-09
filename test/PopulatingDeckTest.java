@@ -40,7 +40,29 @@ public class PopulatingDeckTest {
      * Test of getFace method, of class PopulatingDeck.
      */
     @Test
-    public void testGetFace() {
+    public void testGetFaceGood() {
+        System.out.println("getFace");
+        PopulatingDeck instance = new PopulatingDeck();
+        String expResult = "true";
+        String result = instance.getFace();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    
+        @Test
+    public void testGetFaceBad() {
+        System.out.println("getFace");
+        PopulatingDeck instance = new PopulatingDeck();
+        String expResult = "false";
+        String result = instance.getFace();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    
+        @Test
+    public void testGetFaceBoundary() {
         System.out.println("getFace");
         PopulatingDeck instance = new PopulatingDeck();
         String expResult = "true";
@@ -54,7 +76,33 @@ public class PopulatingDeckTest {
      * Test of canPlace method, of class PopulatingDeck.
      */
     @Test
-    public void testCanPlace() {
+    public void testCanPlaceGood() {
+        System.out.println("canPlace");
+        PopulatingDeck o = null;
+        String c = "0";
+        PopulatingDeck instance = new PopulatingDeck();
+        boolean expResult = true;
+        boolean result = instance.canPlace(o, c);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    
+    @Test
+    public void testCanPlaceBad() {
+        System.out.println("canPlace");
+        PopulatingDeck o = null;
+        String c = "0";
+        PopulatingDeck instance = new PopulatingDeck();
+        boolean expResult = false;
+        boolean result = instance.canPlace(o, c);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    
+    @Test
+    public void testCanPlaceBoundary() {
         System.out.println("canPlace");
         PopulatingDeck o = null;
         String c = "0";
