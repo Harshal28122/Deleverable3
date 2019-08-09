@@ -53,9 +53,31 @@ public class UnoTest {
      * Test of draw method, of class Uno.
      */
     @Test
-    public void testDraw() {
+    public void testDrawGood() {
         System.out.println("draw");
         int cards = 0;
+        ArrayList<PopulatingDeck> deck = null;
+        Uno.draw(cards, deck);
+        boolean expResult = true;
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    
+     @Test
+    public void testDrawBad() {
+        System.out.println("draw");
+        int cards = 2;
+        ArrayList<PopulatingDeck> deck = null;
+        Uno.draw(cards, deck);
+        boolean expResult = true;
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    
+     @Test
+    public void testDrawBoundary() {
+        System.out.println("draw");
+        int cards = 52;
         ArrayList<PopulatingDeck> deck = null;
         Uno.draw(cards, deck);
         boolean expResult = true;
